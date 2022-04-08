@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/xini.dev/static/css/main.3828c2fc.css",
+    "main.js": "/xini.dev/static/js/main.691a47ce.js",
+    "static/js/787.7a532d93.chunk.js": "/xini.dev/static/js/787.7a532d93.chunk.js",
+    "static/media/background.png": "/xini.dev/static/media/background.44bc834616f0a1af7d00.png",
+    "index.html": "/xini.dev/index.html",
+    "main.3828c2fc.css.map": "/xini.dev/static/css/main.3828c2fc.css.map",
+    "main.691a47ce.js.map": "/xini.dev/static/js/main.691a47ce.js.map",
+    "787.7a532d93.chunk.js.map": "/xini.dev/static/js/787.7a532d93.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3828c2fc.css",
+    "static/js/main.691a47ce.js"
+  ]
+}
