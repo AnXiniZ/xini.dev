@@ -1,36 +1,47 @@
 import React from 'react';
+import { FaEnvelope, FaGithub, FaXTwitter, FaLinkedin } from 'react-icons/fa6';
 
-const Contact: React.FC = () => {
+const Contact: React.FC = ():JSX.Element => {
+    const contacts = [
+        {
+            name: 'Email',
+            icon: <FaEnvelope className="text-4xl" />,
+            link: 'mailto:anxinizlol@gmail.com',
+            color: 'bg-red-500'
+        },
+        {
+            name: 'GitHub',
+            icon: <FaGithub className="text-4xl" />,
+            link: 'https://github.com/XiniDev',
+            color: 'bg-gray-800'
+        },
+        {
+            name: 'Twitter',
+            icon: <FaXTwitter className="text-4xl" />,
+            link: 'https://x.com/XiniDev',
+            color: 'bg-blue-500'
+        },
+        {
+            name: 'LinkedIn',
+            icon: <FaLinkedin className="text-4xl" />,
+            link: 'https://www.linkedin.com/in/anxini/',
+            color: 'bg-blue-700'
+        },
+    ];
+
     return (
         <section id="contact" className="py-20 bg-white text-gray-800">
-        <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-6 text-center">Contact Me</h2>
-            <form className="max-w-lg mx-auto">
-            <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                Name
-                </label>
-                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your Name" />
+            <div className="container mx-auto px-4">
+                <h2 className="text-4xl font-bold mb-12 text-center">Contact Me</h2>
+                <div className="grid lg:grid-cols-4 gap-8">
+                    {contacts.map((contact, index) => (
+                    <a key={index} href={contact.link} className={`flex flex-col items-center p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ${contact.color} text-white`} target="_blank" rel="noopener noreferrer">
+                        {contact.icon}
+                        <h3 className="text-2xl font-bold mt-4">{contact.name}</h3>
+                    </a>
+                    ))}
+                </div>
             </div>
-            <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                Email
-                </label>
-                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Your Email" />
-            </div>
-            <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
-                Message
-                </label>
-                <textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" placeholder="Your Message" rows={5}></textarea>
-            </div>
-            <div className="flex items-center justify-center">
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                Send
-                </button>
-            </div>
-            </form>
-        </div>
         </section>
     );
 };
