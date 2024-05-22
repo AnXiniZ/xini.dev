@@ -1,6 +1,7 @@
 import React from 'react';
 import wsmathLogo from '@assets/images/wsmathLogo.png';
 import overthrowSynthetica from '@assets/images/overthrowSynthetica.png';
+import goldenGun from '@assets/images/goldenGun.png';
 
 const projects = [
     {
@@ -14,6 +15,12 @@ const projects = [
         description: 'Overthrow Synthetica is a game jam demo created in collaboration with Codethulu over a span of two weeks for the Warwick Game Dev Society. This project showcases advanced game development techniques using ThreeJS and WebGL, highlighting the team\'s ability to quickly prototype and develop a functional game with unique mechanics and creativity.',
         image: overthrowSynthetica,
         link: 'https://github.com/BlueTentProductions/overthrow-synthetica'
+    },
+    {
+        title: 'Golden Gun (ECS Platformer demo)',
+        description: 'Golden Gun is a platformer demo is used to test the Entity-Component-System (ECS) architecture. Developed in C++ and utilizing SDL2, the game showcases responsive platformer controls. The ECS system allows for flexible and efficient management of game entities, giving me practice to create games in this form in the future.',
+        image: goldenGun,
+        link: 'https://github.com/XiniDev/Golden-Gun'
     },
   ];
 
